@@ -1,6 +1,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 
-import { CartContext } from "./cartContext";
+import { CartContext } from "./CartContext";
 
 import type { Product } from "../types/Product";
 import type { CartItem } from "../types/CartItem";
