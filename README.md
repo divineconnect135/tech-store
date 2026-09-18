@@ -1,75 +1,91 @@
-# React + TypeScript + Vite
+# Tech Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive e-commerce frontend built with React, TypeScript, Vite, Tailwind CSS, and React Router.
 
-Currently, two official plugins are available:
+The project demonstrates core frontend development concepts including reusable components, state management, filtering, sorting, routing, cart management, localStorage persistence, responsive design, and form validation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Responsive home page
+- Product catalog
+- Product search
+- Category filtering
+- Product sorting
+- Product details pages
+- Stock availability
+- Add products to cart
+- Increase and decrease quantity
+- Remove products from cart
+- Cart item count
+- Cart subtotal calculation
+- Persistent cart using localStorage
+- Checkout form
+- Basic form validation
+- Order summary
+- Empty cart and no-results states
+- Responsive navigation
+- 404 page
+- Mobile, tablet, and desktop layouts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Context API
+- localStorage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## What I Learned
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+This project helped me practice:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Building reusable React components
+- Working with TypeScript types and props
+- Managing local state with `useState`
+- Sharing global state with Context API
+- Creating custom hooks
+- Working with arrays using `map`, `filter`, `find`, `sort`, and `reduce`
+- Creating dynamic routes with React Router
+- Using URL search parameters for filters
+- Building controlled forms
+- Implementing basic form validation
+- Persisting state with localStorage
+- Handling product stock and disabled states
+- Building responsive layouts with Tailwind CSS
+- Creating empty and error UI states
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Project Structure
 
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── components/
+│   ├── Footer.tsx
+│   ├── Navbar.tsx
+│   └── ProductCard.tsx
+│
+├── context/
+│   ├── CartContext.ts
+│   ├── CartProvider.tsx
+│   └── useCart.ts
+│
+├── data/
+│   └── products.ts
+│
+├── pages/
+│   ├── Cart.tsx
+│   ├── Checkout.tsx
+│   ├── Home.tsx
+│   ├── NotFound.tsx
+│   ├── ProductDetails.tsx
+│   └── Products.tsx
+│
+├── types/
+│   ├── CartItem.ts
+│   └── Product.ts
+│
+├── App.tsx
+├── index.css
+└── main.tsx
 ```
