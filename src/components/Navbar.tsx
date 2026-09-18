@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 text-white backdrop-blur">
-      <nav className="mx-auto max-w-7xl px-6">
+      <nav className="mx-auto max-w-7xl px-5">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" onClick={closeMenu} className="text-xl font-bold">
             Tech Store
