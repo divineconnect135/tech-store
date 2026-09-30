@@ -1,31 +1,33 @@
 # Tech Store
 
-A responsive e-commerce frontend built with React, TypeScript, Vite, Tailwind CSS, and React Router.
+A responsive e-commerce frontend built with React, TypeScript, Tailwind CSS, React Router, and Context API.
 
-The project demonstrates core frontend development concepts including reusable components, state management, filtering, sorting, routing, cart management, localStorage persistence, responsive design, and form validation.
+Tech Store allows users to browse technology products, search and filter the catalog, view product details, manage a shopping cart, and complete a checkout flow.
+
+## Live Demo
+
+[View Live Demo](LIVE_DEMO_URL)
 
 ## Features
 
-- Responsive home page
-- Product catalog
-- Product search
-- Category filtering
-- Product sorting
-- Product details pages
-- Stock availability
-- Add products to cart
-- Increase and decrease quantity
-- Remove products from cart
-- Cart item count
-- Cart subtotal calculation
+- Browse a catalog of technology products
+- Search products by name
+- Filter products by category
+- Sort products
+- View individual product details
+- Display product stock availability
+- Add products to the shopping cart
+- Increase and decrease product quantities
+- Remove products from the cart
+- Dynamic cart item count
+- Automatic subtotal calculation
 - Persistent cart using localStorage
-- Checkout form
-- Basic form validation
+- Checkout form with validation
 - Order summary
-- Empty cart and no-results states
+- Empty-cart and no-results states
 - Responsive navigation
-- 404 page
-- Mobile, tablet, and desktop layouts
+- Custom 404 page
+- Responsive layouts for mobile, tablet, and desktop
 
 ## Tech Stack
 
@@ -37,24 +39,27 @@ The project demonstrates core frontend development concepts including reusable c
 - Context API
 - localStorage
 
-## What I Learned
+## Technical Implementation
 
-This project helped me practice:
+### State Management
 
-- Building reusable React components
-- Working with TypeScript types and props
-- Managing local state with `useState`
-- Sharing global state with Context API
-- Creating custom hooks
-- Working with arrays using `map`, `filter`, `find`, `sort`, and `reduce`
-- Creating dynamic routes with React Router
-- Using URL search parameters for filters
-- Building controlled forms
-- Implementing basic form validation
-- Persisting state with localStorage
-- Handling product stock and disabled states
-- Building responsive layouts with Tailwind CSS
-- Creating empty and error UI states
+Cart state is managed globally using React Context API, allowing cart data and actions to be shared throughout the application.
+
+### Persistent Cart
+
+Cart data is stored in localStorage so products remain in the cart after the browser is refreshed.
+
+### Routing
+
+React Router is used for client-side navigation between the product catalog, product details, cart, checkout, and other application pages.
+
+### Product Filtering and Sorting
+
+The product catalog supports searching, category filtering, and sorting to make products easier to discover.
+
+### Responsive Design
+
+The interface was built with Tailwind CSS and adapts across mobile, tablet, and desktop screen sizes.
 
 ## Project Structure
 
@@ -64,15 +69,12 @@ src/
 │   ├── Footer.tsx
 │   ├── Navbar.tsx
 │   └── ProductCard.tsx
-│
 ├── context/
 │   ├── CartContext.ts
 │   ├── CartProvider.tsx
 │   └── useCart.ts
-│
 ├── data/
 │   └── products.ts
-│
 ├── pages/
 │   ├── Cart.tsx
 │   ├── Checkout.tsx
@@ -80,12 +82,9 @@ src/
 │   ├── NotFound.tsx
 │   ├── ProductDetails.tsx
 │   └── Products.tsx
-│
 ├── types/
 │   ├── CartItem.ts
 │   └── Product.ts
-│
 ├── App.tsx
 ├── index.css
 └── main.tsx
-```
